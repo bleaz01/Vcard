@@ -4,7 +4,9 @@ body{
 	grid-template-columns: repeat(3, 1fr);
 	grid-row-gap: 10px;
 	grid-column-gap: 10px;
-	background-image:-moz-linear-gradient(left, #86BEBF, #2D3F40);
+	background:linear-gradient(left, #86BEBF, #2D3F40);
+	background:-moz-linear-gradient(left, #86BEBF, #2D3F40);
+	background:-webkit-linear-gradient(left, #86BEBF, #2D3F40);
 	border-radius: 8px;
 }
 
@@ -58,12 +60,25 @@ body{
 	width:200%;
 	height:200%;
 }
-
+.footer:hover .Overlay2{
+	width:100%;
+}
+.Overlay2{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 0;
+	overflow: hidden;
+	height: 100%;
+	transition: .5s ease;
+	background-color:#2D3F40;
+}
 .footer{
 	position:fixed;
 	bottom:0px;
 	right:0px;
-	border-style: solid;
+	width:30%;
 }
 
 .text1{
@@ -76,3 +91,11 @@ body{
 	font-size:medium;
 }
 
+.text3{
+	text-align:center;
+	font-size: medium;
+}
+.text4{
+	position:relative;
+	left:10%;
+}
